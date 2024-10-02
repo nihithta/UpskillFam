@@ -1,0 +1,132 @@
+/* App.css */
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7;
+}
+
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar ul {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+}
+
+.get-in-touch-btn {
+  padding: 10px 20px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 25px;
+  font-size: 1rem;
+}
+
+.main-content {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.main-heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.main-heading span {
+  display: inline-block;
+  background: linear-gradient(90deg, yellow, lightblue);
+  padding: 5px 10px;
+  border-radius: 15px;
+}
+
+.main-subheading {
+  margin-top: 20px;
+  font-size: 1rem;
+  color: #707070;
+}
+
+.email-subscription {
+  margin-top: 30px;
+}
+
+.email-input {
+  padding: 15px;
+  width: 300px;
+  border: 1px solid black;
+  border-radius: 25px;
+  margin-right: 10px;
+}
+
+.send-btn {
+  padding: 15px 25px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 25px;
+}
+
+.image-section {
+  margin-top: 40px;
+  position: relative;
+}
+
+.main-image {
+  width: 80%;
+  border-radius: 25px;
+}
+
+.management-btn {
+  position: absolute;
+  bottom: -20px;
+  right: 10%;
+  padding: 15px 30px;
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 25px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 0;
+  background-color: #000;
+  color: #fff;
+}
+
+.footer-section {
+  font-size: 1rem;
+}
+
+.footer-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.footer-seal img {
+  width: 100px;
+}

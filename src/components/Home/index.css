@@ -1,172 +1,215 @@
-/* src/components/Home.css */
-.home-container {
-    background-color: #111111;
-    color: #ffffff;
-    padding: 50px;
-    min-height: 100vh;
+  @import '@fortawesome/fontawesome-free/css/all.min.css';
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+  .home-container {
+      color: #000000;
+      padding: 50px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .hero-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-left: 45px;
+      height: 100vh; /* Make it full screen height */
+      overflow: hidden;
+    }
+    
+    .bg-video {
+      position: absolute; /* Position it absolutely */
+      top: 0;
+      left: 0;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      object-fit: cover; /* Cover the entire section */
+      z-index: -1; /* Behind the content */
+    }
+    
+    .text-section {
+      margin-top: 15px;
+      max-width: 1200px;
+      text-align: center;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      z-index: 1;
+    }
+    
+    .text-section h1 {
+      font-size: 60px;
+      margin-bottom: 20px;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 720;
+    }
+    
+    .text-section p {
+      
+      width: 500px;
+      font-size: 18px;
+      margin-bottom: 40px;
+      color: #322b2b;
+    }
+    
+    .get-started-btn {
+      background-color: #1e90ff;
+      color: white;
+      padding: 15px 30px;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 5px;
+      margin-right: 20px;
+    }
+    
+    .get-started-btn:hover {
+      background-color: #156dc1;
+    }
+    
+    .request-demo {
+      color: white;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+    
+    .image-section img {
+      max-width: 400px;
+      object-fit: contain;
+    }
+    
+    .stats-section {
+      display: flex;
+      gap: 50px;
+      margin-top: 60px;
+    }
+    
+    .stats-section div {
+      text-align: center;
+    }
+    
+    .stats-section h3 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+    
+    .stats-section p {
+      color: #bbbbbb;
+      font-size: 16px;
+    }
+
+    .podcast-container {
+      height: 100px;
+      width: 300px;
+      display: inline-block;
+      border-radius: 50px;
+      vertical-align: middle;
+      background-position: 0 0;
+      margin-left: 10px;
+      margin-right: 10px;
   }
 
-  .light-mode {
-    background-color: #ffffff;
-    color: #000000;
+  .podcast-container video {
+    height: 100px;
+    width: 300px;
+    border-radius: 50px;
+    object-fit: cover;
   }
 
-  .dark-mode {
-    background-color: #111111;
-    color: #ffffff;
-  }
-.navbar-light {
-    color: #ffffff;
-    background-color: #453f3f;
-    border-radius: 12px;
-    height: 60px;
-    width: 100%;
-}
-
-  /* Add this to ensure .nav-right is a flex container */
-.nav-right {
+  .ampersand-container {
+    position: relative;
     display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 15px; /* Space between login button and mode toggle */
-  }
-  
-  /* Optional: if you want to align the login button and toggle better */
-  .login-btn, .mode-toggle {
-    display: flex;
-    align-items: center;
-  }
-  
-
-  
-  .mode-toggle {
-    color: white;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .toggle-btn:hover {
-    background-color: #0056b3;
-  }
-  
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 50px;
-  }
-  
-  .small-logo {
-    width: 40px;
-    height: 40px;
-    margin-right: 10px;
-  }
-
-  .logo {
-    font-size: 34px;
-    font-weight: bold;
-  }
-  
-  .nav-list {
-    list-style-type: none;
-    display: flex;
-    gap: 20px;
-  }
-  
-  .nav-list li {
-    cursor: pointer;
-    font-weight: bold;
     margin-left: 10px;
     margin-right: 10px;
+    width: 140px;
   }
 
-  .login-btn {
-    background-color: transparent;
-    border: 2px solid #00aaff;
-    padding: 8px 16px;
-    font-size: 16px;
-    color: #00aaff;
-    cursor: pointer;
-    border-radius: 4px;
-    transition: background-color 0.3s, color 0.3s;
-  }
-  
-  .login-btn:hover {
-    background-color: #00aaff;
-    color: #ffffff;
-  }
-  
-  .hero-section {
+  .ampersand, .bag-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    margin-left: 45px;
-    margin-top: 30px;
+    font-size: 40px;
+    color: rgb(0, 0, 0);
+    background-color: #e1e157;
+    border-style: solid;
+    position: absolute;
   }
-  
-  .text-section {
-    margin-top: 15px;
-    max-width: 600px;
+
+  .bag-icon {
+    background-color: #ff7043;
   }
-  
-  .text-section h1 {
-    font-size: 48px;
-    font-weight: bold;
-    margin-bottom: 20px;
+
+  @keyframes swapAmpersand {
+    0%, 100% {
+      left: 0;
+    }
+    50% {
+      left: 70px;
+    }
   }
-  
-  .text-section p {
-    font-size: 18px;
-    margin-bottom: 40px;
-    color: #bbbbbb;
+
+  @keyframes swapBagIcon {
+    0%, 100% {
+      left: 70px;
+    }
+    50% {
+      left: 0;
+    }
   }
-  
-  .get-started-btn {
-    background-color: #1e90ff;
-    color: white;
-    padding: 15px 30px;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: bold;
-    border-radius: 5px;
-    margin-right: 20px;
+
+  .ampersand {
+    animation: swapAmpersand 3s infinite ease-in-out;
   }
-  
-  .get-started-btn:hover {
-    background-color: #156dc1;
+
+  .bag-icon {
+    animation: swapBagIcon 3s infinite ease-in-out;
   }
-  
-  .request-demo {
-    color: white;
-    cursor: pointer;
-    text-decoration: underline;
+
+  .trainer-container {
+    height: 100px;
+    width: 130px;
+    display: inline-block;
+    border-radius: 50px;
+    vertical-align: middle;
+    margin-left: 10px;
   }
-  
-  .image-section img {
-    max-width: 400px;
-    object-fit: contain;
+
+  .trainer-container video {
+    height: 100px;
+    width: 130px;
+    border-radius: 50px;
+    object-fit: cover;
   }
-  
-  .stats-section {
+
+  .cover-container {
     display: flex;
-    gap: 50px;
-    margin-top: 60px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
   }
-  
-  .stats-section div {
-    text-align: center;
+
+  .main-heading {
+    line-height: 1.8;
+    white-space: nowrap;
   }
-  
-  .stats-section h3 {
-    font-size: 32px;
-    margin-bottom: 10px;
+
+  .line2 {
+    display: flex;
+    align-items: center;
+    gap: 15px;
   }
-  
-  .stats-section p {
-    color: #bbbbbb;
-    font-size: 16px;
+
+  .line2-container {
+    display: flex;
   }
+
+
   

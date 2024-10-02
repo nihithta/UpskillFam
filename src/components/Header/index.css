@@ -1,0 +1,130 @@
+.light-mode {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap');
+.navbar {
+  padding-top: 25px;
+  padding-left: 18px;
+  padding-right: 18px;
+  padding-bottom: 25px;
+  font-family: 'Rubik';
+}
+
+/* Add this to ensure .nav-right is a flex container */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Space between login button and mode toggle */
+}
+
+/* Optional: if you want to align the login button and toggle better */
+.login-btn, .mode-toggle {
+  display: flex;
+  align-items: center;
+}
+
+
+
+.mode-toggle {
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.toggle-btn:hover {
+  background-color: #0056b3;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.small-logo {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.logo {
+  font-size: 34px;
+  font-weight: bold;
+}
+
+.nav-list {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-list li {
+  cursor: pointer;
+  margin-left: 10px;
+  margin-right: 10px;
+  color: rgb(48, 45, 45);
+}
+
+.select-wrapper {
+  position: relative;
+  margin-right: 0px;
+}
+
+.nav-list select {
+  cursor: pointer;
+  background: none;
+  border: none;
+  appearance: none; /* Removes default select arrow */
+  font-size: 16px;
+  color: rgb(48, 45, 45); /* Ensure text color is white */
+  background-color: transparent;
+  margin-right: 0px;
+}
+
+/* Custom arrow styling */
+.select-wrapper::after {
+  content: '▼'; /* Custom arrow symbol */
+  font-size: 12px;
+  color: rgb(0, 0, 0); /* Set arrow color */
+  position: absolute;
+  top: 50%;
+  right: 0px;
+  transform: translateY(-50%);
+  pointer-events: none; /* Ensure clicks go through the arrow */
+}
+
+/* Style for the dropdown options */
+.nav-list select option {
+  color: black; /* Set dropdown text color */
+  background-color: white; /* Set dropdown background color */
+  padding: 5px;
+}
+
+/* Hover effect for consistency with other items */
+.nav-list select:hover {
+  text-decoration: underline;
+}
+
+
+.login-btn {
+  background-color: transparent;
+  border: 2px solid #00aaff;
+  padding: 8px 16px;
+  font-size: 16px;
+  color: #00aaff;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.login-btn:hover {
+  background-color: #00aaff;
+  color: #ffffff;
+}
