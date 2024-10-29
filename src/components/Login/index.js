@@ -1,16 +1,18 @@
 import React, { useState } from 'react';
 import { auth, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from '../../firebase';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './index.css';
 
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const navigate = useNavigate(); // Hook for navigation
 
   const handleLogin = async () => {
     try {
       await signInWithEmailAndPassword(auth, email, password);
       alert("Logged in successfully!");
+      navigate('/'); // Redirect to home page
     } catch (error) {
       alert(error.message);
     }
@@ -21,6 +23,7 @@ const Login = () => {
     try {
       await signInWithPopup(auth, provider);
       alert("Logged in with Google successfully!");
+      navigate('/'); // Redirect to home page
     } catch (error) {
       alert(error.message);
     }
