@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import { FiSun, FiMoon } from 'react-icons/fi';
+import { Link } from 'react-router-dom';
 import '@dotlottie/player-component/dist/dotlottie-player.js';
 import './index.css'; 
 
@@ -38,7 +39,9 @@ class Header extends Component {
           </ul>
           
           <div className="nav-right">
-            <button className='login-btn'>Login</button>
+            <Link to="/login">  
+              <button className='login-btn'>Login</button>
+            </Link>
             <div className="mode-toggle" onClick={this.toggleDarkMode}>
                 {isDarkMode ? <FiSun size={24} color="#FFD700" /> : <FiMoon size={24} color="#000080" />}
             </div>

@@ -47,8 +47,6 @@ class Home extends Component {
               <button className="get-started-btn">Get Started</button>
               <span className="request-demo">Who are we?</span>
             </div>
-
-            
           </div>
         </div>
       </div>

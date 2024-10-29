@@ -1,14 +1,33 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 import Home from './components/Home';
-import Header from './components/Header'
+import Header from './components/Header';
+import Login from './components/Login';
+import Register from './components/Register';
 
 function App() {
+  const location = useLocation();
+  const noHeaderRoutes = ['/login', '/register'];
+  const shouldShowHeader = !noHeaderRoutes.includes(location.pathname);
+
   return (
-    <div>
-      <Header />
-      <Home />
-    </div>
+    <>
+      {shouldShowHeader && <Header />}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+      </Routes>
+    </>
   );
 }
 
-export default App;
+function WrappedApp() {
+  return (
+    <Router>
+      <App />
+    </Router>
+  );
+}
+
+export default WrappedApp;
