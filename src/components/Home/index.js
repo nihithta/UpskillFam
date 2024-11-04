@@ -1,26 +1,40 @@
 import { Component } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import Footer from '../Footer';
 import './index.css';
 
 const faqData = [
   {
-    question: "What is your refund policy?",
-    answer: "Our refund policy allows you to request a full refund within 30 days of your purchase. For more information, please contact our support team.",
+    question: "How can I get started with upskilling on this platform?",
+    answer: "Begin by exploring our range of resources, such as podcasts, blogs, and videos. You can start with a roadmap or resume tips that match your career goals and go from there.",
   },
   {
-    question: "How can I track my order?",
-    answer: "Once your order has shipped, we’ll send you an email with a tracking number and link to check the status of your package.",
+    question: "What types of content are available on the platform?",
+    answer: "We provide a variety of content including podcasts, blog articles on industry roadmaps, the latest market trends, resume-building tips, upskilling tips, and much more.",
   },
   {
-    question: "Do you offer international shipping?",
-    answer: "Yes, we offer worldwide shipping to many countries. Shipping costs and times vary depending on location.",
+    question: "How often is the content updated?",
+    answer: "We’re committed to providing fresh, relevant content and update our resources frequently to ensure you're getting the latest insights and best practices across various domains.",
   },
   {
-    question: "How can I contact customer support?",
-    answer: "Our support team is available 24/7. You can reach us via email, phone, or live chat for any inquiries.",
+    question: "Is the platform free to use?",
+    answer: "Yes UpskillFam is a community for the students by the students and will always remain free:)",
+  },
+  {
+    question: "What is the Resume Evaluator, and how does it work?",
+    answer: "Our Resume Evaluator analyzes your resume to ensure it’s optimized for applicant tracking systems (ATS) and provides personalized tips to help improve your profile’s appeal to recruiters.",
+  },
+  {
+    question: "How does the job board work, and who can use it?",
+    answer: "Our job board lists current openings across various fields and locations. Anyone with a registered account can use it to explore opportunities and apply directly to companies.",
+  },
+  {
+    question: "What kind of upskilling tips do you offer?",
+    answer: "Our platform provides tips on soft and technical skills, including effective learning techniques, communication strategies, and ways to adapt to changing market demands.",
   },
 ];
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -67,16 +81,16 @@ class Home extends Component {
           <div className="text-section">
             <div className='cover-container'>
               <h1 className='main-heading'>
-                Find
+                Find - 
                 <div className='podcast-container'>
                   <video src="/podcastvid.mp4" loop muted autoPlay></video>
                 </div>
-                seminars<br />
+                podcasts<br />
                 <div className='line2'>
-                  trainings
+                  trainings,
                   <span className='ampersand-container'>
                     <div className='ampersand'>&</div>
-                    <div className='bag-icon'><i className="fas fa-shopping-bag"></i></div>
+                    <div className='bag-icon'><i className="fas fa-briefcase"></i></div>
                   </span>
                   <div>
                     trainers
@@ -161,7 +175,11 @@ class Home extends Component {
             ))}
           </div>
         </div>
+
+        <Footer />
+
       </div>
+      
     );
   }
 }
