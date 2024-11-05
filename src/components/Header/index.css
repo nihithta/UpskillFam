@@ -316,6 +316,11 @@
     cursor: pointer;
     font-size: 24px;
     color: #1d72b8;
+    border: solid 0.3px;
+    padding: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 5px;
   }
 
   .navbar {
